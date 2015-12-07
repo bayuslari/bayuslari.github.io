@@ -1,0 +1,90 @@
+/*======================================
+=            Mobile General            =
+======================================*/
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+        overflow: hidden;
+    }
+}
+
+/*=====  End of Mobile General  ======*/
+
+/*==================================
+=            Responsive            =
+==================================*/
+@media (max-width: 767px) {
+    .open-nav,
+    .close-nav {
+        display: block;
+        cursor: pointer;
+    }
+    .open-nav {
+        position: absolute;
+        top: 50px;
+        left: 15px;
+    }
+    .close-nav {
+        padding: 10px;
+    }
+    .navbar ul li {
+        width: 100%;
+        border-bottom: 2px solid #131212;
+    }
+    .navbar ul li:first-child {
+        border-top: 2px solid #131212;
+    }
+    .navbar {
+        position: fixed;
+        left: -70%;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        z-index: 3;
+        display: block;
+        -webkit-transition: left .3s ease;
+        transition: left .3s ease;
+        background: #1b1a1a;
+    }
+    .nav-mobile .navbar {
+        left: 0;
+    }
+    body.nav-mobile {
+        position: fixed;
+    }
+    .col-4 {
+        width: 50%;
+    }
+    header {
+        padding: 30px 0;
+    }
+    .copyright-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 568px) {
+    .col-2,
+    .col-4 {
+        width: 100%;
+    }
+    .blog-wrapper {
+        padding-bottom: 30px !important;
+    }
+}
+/*=====  End of Responsive  ======*/

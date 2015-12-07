@@ -1,0 +1,409 @@
+/*==============================
+=            General            =
+==============================*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1b1a1a;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+}
+
+
+/* Type will scale with document */
+
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    overflow: hidden;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: #909090;
+}
+
+.clearfix {
+    clear: both;
+    overflow: hidden;
+}
+
+
+/*=====  End of General  ======*/
+
+
+/*=================================
+=            Column                 =
+=================================*/
+
+.col-2 {
+    width: 50%;
+    padding: 15px;
+    display: inline-block;
+    float: left;
+}
+
+.col-4 {
+    width: 25%;
+    padding: 15px;
+    display: inline-block;
+    float: left;
+}
+
+
+/*=====  End of Column  ======*/
+
+
+/*==============================
+=            Header            =
+==============================*/
+
+header {
+    padding: 30px 0 10px;
+}
+
+.navbar-header .logo-wrap {
+    max-width: 70px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.navbar-header .logo {
+    background-image: url("../img/white-owl.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+
+/*.navbar-header .logo:hover {
+    transform:scale(1.1);
+}*/
+
+.navbar {
+    position: relative;
+    display: block;
+}
+
+.nav {
+    text-align: center;
+}
+
+.nav li {
+    display: inline-block;
+    position: relative;
+    font-family: "Oswald", sans-serif;
+}
+
+.nav li a {
+    line-height: 20px;
+    padding: 15px;
+    display: block;
+    position: relative;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.open-nav,
+.close-nav {
+    display: none;
+}
+
+
+/*=====  End of Header  ======*/
+
+
+/*==============================
+=            Slider            =
+==============================*/
+
+.slider {
+    height: 600px;
+}
+
+.owl-carousel,
+.owl-carousel .owl-stage-outer,
+.owl-carousel .owl-stage,
+.owl-carousel .owl-item,
+.owl-carousel .owl-item .item,
+.owl-carousel .item img {
+    height: 100%;
+}
+
+.owl-carousel .item {
+    position: relative;
+}
+
+.owl-carousel .item img {
+    height: 100% !important;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -9px;
+}
+
+.owl-prev {
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.owl-next {
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.owl-carousel .item:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4);
+    z-index: 2;
+}
+
+.caption-slide {
+    position: absolute;
+    text-align: center;
+    z-index: 3;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+}
+
+.caption-slide h2 {
+    text-transform: uppercase;
+}
+
+
+/*=====  End of Slider  ======*/
+
+
+/*=================================
+=            Blog                 =
+=================================*/
+
+#blog {
+    padding: 80px 0 60px;
+}
+
+.blog-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-wrapper h3 {
+    padding: 10px 0;
+}
+
+.img-wrapper {
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.img-wrapper:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, .4);
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    opacity: 1;
+}
+
+.img-wrapper:hover:before {
+    opacity: 0;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 400px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*=====  End of Blog  ======*/
+
+
+/*=================================
+=            Footer               =
+=================================*/
+
+#footer {
+    background: #141313;
+}
+
+.footer-top {
+    padding: 80px 0 40px;
+}
+
+.footer-section h4 {
+    padding: 10px 0;
+}
+
+.footer-section p {
+    text-align: justify;
+}
+
+.footer-section i {
+    color: #909090;
+}
+
+.footer-top .social-item {
+    display: inline-block;
+    padding: 10px;
+}
+
+.footer-bottom {
+    padding: 10px 0;
+    text-align: right;
+}
+
+.social-item i {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.facebook i:hover {
+    color: #3B5998;
+}
+
+.twitter i:hover {
+    color: #0084b4;
+}
+
+.instagram i:hover {
+    color: #3f729b;
+}
+
+
+/*=====  End of Footer =====*/
+
+
+/*=============================================
+=            Overlay on Mobile Nav            =
+=============================================*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.79);
+    z-index: -115;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+}
+
+.nav-mobile .overlay {
+    z-index: 2;
+    opacity: 1;
+}
+
+
+/*=====  End of Overlay on Mobile Nav  ======*/
